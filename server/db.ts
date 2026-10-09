@@ -2,7 +2,8 @@ import { DatabaseSync } from 'node:sqlite';
 import path from 'node:path';
 import fs from 'node:fs';
 
-const DB_PATH = path.resolve(process.cwd(), 'route53.db');
+const DB_PATH = process.env.DATABASE_PATH
+  || path.resolve(process.cwd(), 'route53.db');
 export const db = new DatabaseSync(DB_PATH);
 
 // Enable foreign keys
