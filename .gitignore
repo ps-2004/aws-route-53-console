@@ -8,3 +8,8 @@ route53.db
 route53.db-shm
 route53.db-wal
 .DS_Store
+
+# Python virtual environments and cache files
+**/.venv/
+**/__pycache__/
+*.py[cod]
