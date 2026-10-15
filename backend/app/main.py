@@ -31,7 +31,11 @@ app.include_router(records.router, prefix="/api")
 
 @app.get("/")
 def root():
-    return RedirectResponse(url="https://aws-route-53-console.onrender.com/docs", status_code=302)
+    return {
+        "service": "AWS Route 53 Clone API",
+        "status": "online",
+        "documentation": "/docs"
+    }
 
 @app.get("/api/health")
 def health_check():
