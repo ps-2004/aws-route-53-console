@@ -31,7 +31,7 @@ app.include_router(records.router, prefix="/api")
 
 @app.get("/")
 def root():
-    return RedirectResponse(url="/docs", status_code=302)
+    return RedirectResponse(url="https://aws-route-53-console.onrender.com/docs", status_code=302)
 
 @app.get("/api/health")
 def health_check():
