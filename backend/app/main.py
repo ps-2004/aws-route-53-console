@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from .database import engine, Base
 from .seed import seed_database
 from .routers import auth, hosted_zones, records
+from fastapi.responses import RedirectResponse
 
 # Initialize database schema
 Base.metadata.create_all(bind=engine)
@@ -30,11 +31,7 @@ app.include_router(records.router, prefix="/api")
 
 @app.get("/")
 def root():
-    return {
-        "service": "AWS Route 53 Clone API",
-        "status": "online",
-        "documentation": "/docs"
-    }
+    return RedirectResponse(url="/docs", status_code=302)
 
 @app.get("/api/health")
 def health_check():
