@@ -13,3 +13,7 @@ route53.db-wal
 **/.venv/
 **/__pycache__/
 *.py[cod]
+
+# Next.js generated files
+frontend/.next/
+frontend/node_modules/
