@@ -2,6 +2,6 @@
   "name": "AWS Route 53 Console",
   "description": "Functional AWS Route 53 Management Console clone with hosted zones, DNS records CRUD, search, filtering, and SQLite persistence.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": ["Clone"]
 }
 
